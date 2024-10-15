@@ -58,6 +58,7 @@ input_data = pd.DataFrame({
 # Encode categorical variables (one-hot encoding)
 input_data_encoded = pd.get_dummies(input_data, drop_first=True)
 
+
 # Ensure all columns required by the model are present (handle missing columns)
 for column in model.feature_names_in_:  # Use feature_names_in_ from your model to get the required features
     if column not in input_data_encoded.columns:
